@@ -145,6 +145,10 @@ def save_filtered_peptides(predict_lc_df: pd.DataFrame, output_folder: Path):
         predict_lc_df (pd.DataFrame): Filtered peptides dataframe.
         output_folder (Path): Directory to save the output CSV.
     """
+    if predict_lc_df.empty:
+        print("No peptides matched the filter criteria for this file. Check your input data")
+        return
+
     # naming csv
     species_name = predict_lc_df.loc[0, "species"]
     species_name = species_name.replace(" ", "_")
