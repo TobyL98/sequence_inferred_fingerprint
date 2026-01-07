@@ -83,7 +83,8 @@ def prepare_lcmsms_df(lcmsms_path: Path) -> pd.DataFrame:
             "PMF_predict",
             "pep_exp_mr",
             "pep_miss",
-        ]
+        ],
+        errors="ignore"
     )
     return lcmsms_df
 
@@ -131,7 +132,8 @@ def filter_and_merge(predict_df: pd.DataFrame, lcmsms_df: pd.DataFrame) -> pd.Da
             "pep_end_min",
             "pep_end_max",
             "Unnamed: 0",
-        ]
+        ],
+        errors="ignore"
     )
 
     predict_lc_df = predict_lc_df.iloc[::-1].reset_index(drop=True)
