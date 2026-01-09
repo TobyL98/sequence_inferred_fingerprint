@@ -15,7 +15,11 @@ results_NCBI/
 Compare_results/Results/
 in_silico_res_NCBI/
 
+#Folders to ignore
+test_theoretical_peptides_outputs/
+
 # Files to ignore
+.run_theoretical_peps.sh
 .sequences_taxon_NCBI.csv
 .sequence_masses.csv
 .DS_Store
